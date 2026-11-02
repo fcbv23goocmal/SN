@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="theme-color" content="#1478b5">
+<title>Page not found | Saigon Night Restaurant</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+<style>:root{--ink:#0e3a57;--sky:#5bb8ea;--sky2:#1478b5;--mist:#e6f4fc;--sun:#ffc21a;--sun2:#ffa90a}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;min-height:100svh;display:grid;place-items:center;background:var(--mist);color:var(--ink);font:400 1.08rem/1.7 Poppins,Helvetica,Arial,sans-serif;text-align:center;padding:40px 6vw;overflow-x:hidden}
+main{max-width:600px}.code{font:400 clamp(4.5rem,22vw,10rem)/1.05 "Kaushan Script",cursive;color:var(--sky2);margin:0}h1{font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.1;margin:0 0 12px;font-weight:800}p{margin:0 0 8px}
+.b{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}a.btn{display:inline-flex;align-items:center;min-height:52px;padding:14px 28px;border-radius:99px;background:var(--sun);color:var(--ink);font-weight:700;text-decoration:none;box-shadow:0 6px 0 var(--sun2)}a.btn.alt{background:#fff;box-shadow:0 6px 0 var(--sky)}
+a.btn:hover{transform:translateY(3px)}:focus-visible{outline:3px solid var(--ink);outline-offset:3px}small{display:block;margin-top:22px;opacity:.65;word-break:break-all;font-size:.85rem}</style></head><body><main>
+<svg width="84" viewBox="0 0 120 92" aria-hidden="true"><path d="M60 78C28 80 6 62 4 42C30 40 52 54 60 78Z" fill="#ffd45e"/><path d="M60 78C92 80 114 62 116 42C90 40 68 54 60 78Z" fill="#ffd45e"/><path d="M60 74C34 66 20 42 24 20C46 26 62 48 60 74Z" fill="#5bb8ea"/><path d="M60 74C86 66 100 42 96 20C74 26 58 48 60 74Z" fill="#5bb8ea"/><path d="M60 8C46 28 46 54 60 74C74 54 74 28 60 8Z" fill="#ffc21a"/><path d="M60 22C54 36 54 52 60 64" stroke="#ffa90a" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M22 84C42 92 78 92 98 84" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg><p class="code" id="c">404</p><h1 id="t">Page not found</h1><p id="m">We couldn’t find that page.</p><div class="b" id="b"></div><small id="s"></small></main>
+<script>
+var C=['Call (980) 237-9888','tel:+19802379888'],H=['Back home','/'],M=['See the menu','/#menu'],F=['Karaoke on Facebook','https://www.facebook.com/SaigonNightCLT/'];
+var E={
+ '404':['404','Page not found','We couldn’t find that page. It may have moved, or the link has a typo.',[H,M,C]],
+ '403':['403','Staff only','That door is for the kitchen crew. The front entrance is this way.',[H,M]],
+ '500':['500','Something went wrong','The kitchen hit a snag on our end. Try again in a minute, or give us a call.',[H,C]],
+ '503':['Back soon','We’re closed for a quick refresh','The site is down for maintenance. For food and hours, call us.',[C]],
+ order:['Orders','Orders are by phone','We don’t take online orders yet. Call us, tell us what you’re craving, and we’ll have it ready.',[C,M]],
+ menu:['Menu','The menu has its own page','Looking for what’s cooking? You’ll find it here.',[M,C]],
+ event:['Karaoke','Karaoke news lives on Facebook','Nights and weekend specials are posted on our Facebook page.',[F,H]],
+ photo:['Photo','That photo wandered off','The image you’re after is missing. The rest of the kitchen is still open.',[H]],
+ file:['PDF','That file isn’t here','Our menu changes often, so we keep it on the website instead of a PDF.',[M,C]],
+ visit:['Visit','Looking for us?','5917 Albemarle Rd, Charlotte, NC 28212. Opens at 4 PM and stays open late.',[['Visit page','/#contact'],C]]};
+var p=decodeURIComponent(location.pathname).toLowerCase(),q=new URLSearchParams(location.search).get('e'),k='404';
+if(q&&E[q])k=q;
+else if(/\.(jpe?g|png|webp|gif|svg|avif|ico)$/.test(p))k='photo';
+else if(/\.(pdf|docx?)$/.test(p))k='file';
+else if(/(wp-|\.php|\/admin|login|xmlrpc|\.env|\.git)/.test(p))k='403';
+else if(/(order|takeout|pickup|cart|checkout)/.test(p))k='order';
+else if(/(menu|food|drink|pho)/.test(p))k='menu';
+else if(/(event|karaoke|party)/.test(p))k='event';
+else if(/(contact|visit|location|hours|directions|reserv|book)/.test(p))k='visit';
+var e=E[k];document.getElementById('c').textContent=e[0];document.getElementById('t').textContent=e[1];document.getElementById('m').textContent=e[2];document.title=e[1]+' | Saigon Night Restaurant';
+document.getElementById('b').innerHTML=e[3].map(function(a,i){return '<a class="btn'+(i?' alt':'')+'" href="'+a[1]+'"'+(/^http/.test(a[1])?' target="_blank" rel="noopener"':'')+'>'+a[0]+'</a>'}).join('');
+if(k==='404'||k==='photo'||k==='file')document.getElementById('s').textContent='You asked for: '+location.pathname;
+</script></body></html>
